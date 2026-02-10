@@ -1,145 +1,204 @@
-  body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Segoe UI", sans-serif;
-    color: white;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
 
-  .card {
-    width: 380px;
-    max-width: 92%;
-    padding: 28px 25px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 45px rgba(0,0,0,0.25);
-    text-align: center;
-  }
+.card {
+  width: 380px;
+  max-width: 92%;
+  padding: 28px 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 45px rgba(0,0,0,0.25);
+  text-align: center;
+}
 
-  h1 {
-    margin-bottom: 10px;
-    font-size: 26px;
-    font-weight: bold;
-  }
+h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
 
-  .status-badge {
-    display: inline-block;
-    padding: 6px 15px;
-    border-radius: 50px;
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-  .online { background: #4caf50; }
-  .offline { background: #e53935; }
+.status-badge {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.online { background: #4caf50; }
+.offline { background: #e53935; }
 
-  /* Center input elements nicely */
-  #authBox {
-    width: 100%;
-    text-align: center;
-  }
+/* Center input elements nicely */
+#authBox {
+  width: 100%;
+  text-align: center;
+}
 
-  input {
-    width: 90%;
-    padding: 14px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background: rgba(255,255,255,0.18);
-    color: white;
-    text-align: center;
-  }
+input {
+  width: 90%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.18);
+  color: white;
+  text-align: center;
+}
 
-  /* Modern Global Button Style */
-  .btn {
-    width: 92%;
-    padding: 14px;
-    margin-top: 15px;
-    border-radius: 12px;
-    border: none;
-    font-size: 17px;
-    cursor: pointer;
-    color: white;
-    font-weight: 600;
+/* Modern Global Button Style */
+.btn {
+  width: 92%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
 
-    background: linear-gradient(135deg, #03a9f4, #0277bd);
-    transition: 0.25s ease;
-    box-shadow: 0 6px 18px rgba(3, 169, 244, 0.35);
-    position: relative;
-    overflow: hidden;
-  }
+  background: linear-gradient(135deg, #03a9f4, #0277bd);
+  transition: 0.25s ease;
+  box-shadow: 0 6px 18px rgba(3, 169, 244, 0.35);
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Ripple effect */
-  .btn:active::after {
-    content: "";
-    position: absolute;
-    width: 180%;
-    height: 180%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255,255,255,0.4);
-    border-radius: 50%;
-    animation: ripple 0.5s ease-out;
-  }
+/* Ripple effect */
+.btn:active::after {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  animation: ripple 0.5s ease-out;
+}
 
-  @keyframes ripple {
-    from { transform: translate(-50%, -50%) scale(0.3); opacity: 1; }
-    to   { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
-  }
+@keyframes ripple {
+  from { transform: translate(-50%, -50%) scale(0.3); opacity: 1; }
+  to   { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+}
 
-  /* Logout Button Style */
-  .logout-btn {
-    background: linear-gradient(135deg, #e53935, #c62828);
-    box-shadow: 0 6px 18px rgba(229, 57, 53, 0.35);
-  }
+/* Logout Button Style */
+.logout-btn {
+  background: linear-gradient(135deg, #e53935, #c62828);
+  box-shadow: 0 6px 18px rgba(229, 57, 53, 0.35);
+}
 
-  /* Modern GPIO Buttons */
-  .gpio-button {
-    width: 100%;
-    padding: 16px;
-    margin: 20px 0 5px 0;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #1f3b73, #274b8c);
-    border: none;
-    cursor: pointer;
-    font-size: 19px;
-    color: white;
-    transition: 0.25s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .gpio-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(30,80,200,0.45);
-  }
-
-  .gpio-button.on {
-    background: linear-gradient(135deg, #00c853, #98ee99);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(0,255,120,0.45);
-  }
-
-  .gpio-status {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #cfcfcf;
-  }
-
-  #authMsg {
-    margin-top: 10px;
-    color: #ffb3b3;
-    font-size: 14px;
-  }
-  input::placeholder {
+#authMsg {
+  margin-top: 10px;
+  color: #ffb3b3;
+  font-size: 14px;
+}
+input::placeholder {
   color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Additions for thermostat UI ===== */
+
+.temps-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 10px 0 5px 0;
+}
+
+.temp-card{
+  padding: 14px 12px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.22);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.temp-title{
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.temp-value{
+  font-size: 42px;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.temp-unit{
+  font-size: 16px;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
+.temp-sub{
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.temp-sub code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  opacity: 0.95;
+}
+
+.int-controls{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mini-btn{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  background: rgba(255,255,255,0.16);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: 0.18s ease;
+}
+
+.mini-btn:hover{
+  transform: translateY(-2px);
+}
+
+.temp-input{
+  width: 70px;
+  padding: 10px 8px;
+  margin: 0;
+  border-radius: 12px;
+  font-size: 18px;
+  background: rgba(255,255,255,0.18);
+}
+
+.apply-btn{
+  width: 100%;
+  margin-top: 12px;
+}
+
+.write-msg{
+  margin: 10px 0 0 0;
+  font-size: 12px;
+  opacity: 0.9;
 }
