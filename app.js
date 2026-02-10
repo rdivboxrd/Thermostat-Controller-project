@@ -127,24 +127,22 @@ function startListeners() {
     renderTemps();
   });
 
-  // Controls
-  intUpBtn.onclick = () => {
-    const base = (document.activeElement === intTempInput)
-      ? parseInt(intTempInput.value, 10)
-      : intTemp;
+  function getDraftBase() {
+    const fromInput = parseInt(intTempInput.value, 10);
+    if (!Number.isNaN(fromInput)) return fromInput;
+    if (typeof intTemp === "number") return intTemp;
+    return 0;
+  }
 
-    let next = (Number.isNaN(base) || base === null || base === undefined) ? 0 : base + 1;
+  intUpBtn.onclick = () => {
+    let next = getDraftBase() + 1;
     next = clampTemp(next);
     intTempInput.value = String(next);
     intTempText.textContent = String(next);
   };
 
   intDownBtn.onclick = () => {
-    const base = (document.activeElement === intTempInput)
-      ? parseInt(intTempInput.value, 10)
-      : intTemp;
-
-    let next = (Number.isNaN(base) || base === null || base === undefined) ? 0 : base - 1;
+    let next = getDraftBase() - 1;
     next = clampTemp(next);
     intTempInput.value = String(next);
     intTempText.textContent = String(next);
