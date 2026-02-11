@@ -12,7 +12,7 @@ import {
   onValue
 } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
-// Firebase config (yours)
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyBaj1Z_q9OCu4qpiZAqT9wLipJ_H5yPXPg",
   authDomain: "embeddedsystemstheromostat.firebaseapp.com",
@@ -31,15 +31,13 @@ const db = getDatabase(app);
 const PATH_CUR = "/CurTemp";
 const PATH_INT = "/IntTemp";
 
-// UI elements (existing)
+// UI elements
 const authBox = document.getElementById("authBox");
 const controlBox = document.getElementById("controlBox");
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 const authMsg = document.getElementById("authMsg");
 const badge = document.getElementById("statusBadge");
-
-// UI elements (new)
 const curTempText = document.getElementById("curTempText");
 const intTempText = document.getElementById("intTempText");
 const intTempInput = document.getElementById("intTempInput");
@@ -171,4 +169,5 @@ function startListeners() {
       writeMsg.textContent = "Write failed: " + e.message;
     }
   };
+
 }
